@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery | Art of Shree</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #4b0082; /* Violet theme */
+      letter-spacing: 1px;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background-color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 80px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close:hover {
+      color: #a855f7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 My Artworks Gallery</h1>
+
+  <div class="gallery-container">
+    <div class="gallery-item"><img src="art1.jpg" alt="Artwork 1" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art3.jpg" alt="Artwork 3" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art2.jpg" alt="Artwork 2" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art4.jpg" alt="Artwork 4" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art5.jpg" alt="Artwork 5" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art6.jpg" alt="Artwork 6" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art7.jpg" alt="Artwork 6" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art8.jpg" alt="Artwork 6" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art9.jpg" alt="Artwork 6" onclick="openLightbox(this)"></div>
+    <div class="gallery-item"><img src="art10.jpg" alt="Artwork 6" onclick="openLightbox(this)"></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <footer>© 2025 Art of Shree | All Rights Reserved</footer>
+
+  <script>
+    function openLightbox(imgElement) {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightbox.style.display = "block";
+      lightboxImg.src = imgElement.src;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    // Close on outside click
+    document.getElementById("lightbox").addEventListener("click", function(e) {
+      if (e.target === this) closeLightbox();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><b>ARTOFSHREE</b>| Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1 class="logo"><i class="fas fa-paint-brush"></i><b><u></u></b> Art of Shree<b></b></h1>
+    <nav> 
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="commission.html">Commission Work</a>
+      <button id="darkModeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h2>Welcome to My Art World</h2><br>
+      <p>Hey,i'am shrashti pal, a passionate artist with love for creating beautiful art.</p><br>
+      <p><b>OUR SPECIALIZATION:</b></p><br>
+      <p>Realistic Portraits • Sketches • Creative Illustrations</p><br>
+      
+      <p>To Explore my more artworks visit my instgram account via below link..!</p><br>
+      <button class="btn" onclick="visitInsta()"><i class="fab fa-instagram"></i> Visit Instagram</button>
+      
+    </div>
+  </section>
+  <!-- ✅ ABOUT SECTION -->
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="shrii.jpg" alt="Artist Photo">
+    <div class="about-text">
+      <h3>Hi, I'm Shrashti pal🎨</h3>
+      <p>
+        I’m a passionate artist who loves creating realistic and expressive artworks.  
+        My focus is on portraits and creative compositions that capture emotions and imagination.  
+        This portfolio reflects my artistic journey and experiments with pencil, watercolor, and digital art.
+      </p>
+      <p>
+        Every artwork I create is an attempt to tell a story — through colors, lines, and emotions.  
+        I hope you enjoy exploring my creations as much as I enjoy making them!
+      </p>
+    </div>
+  </div>
+</section>
+<!-- ✅ CSS (add this in same file or style.css) -->
+<style>
+  /* ABOUT SECTION */
+  .about-section {
+    background-color: #f5f0ff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .about-section h2 {
+    color: #6a0dad;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .about-content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .about-text {
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .about-text h3 {
+    color: #4b0082;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* CONTACT SECTION */
+  .contact-section {
+    background: linear-gradient(90deg, #8a2be2, #6a0dad);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .contact-section p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  .contact-form button {
+    background-color: #fff;
+    color: #6a0dad;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .contact-form button:hover {
+    background-color: #ffd6ff;
+  }
+</style>
+
+
+  
+  <!-- Gallery -->
+  <section id="gallery" class="fade-in">
+    <h2>My Gallery</h2>
+    <div class="gallery">
+      <img src="art1.jpg" alt="Art 1" onclick="openPopup(this)">
+      <img src="art3.jpg" alt="Art 3" onclick="openPopup(this)">
+      <img src="art2.jpg" alt="Art 2" onclick="openPopup(this)">
+      <img src="art4.jpg" alt="Art 2" onclick="openPopup(this)">
+      <img src="art5.jpg" alt="Art 2" onclick="openPopup(this)">
+      <img src="art6.jpg" alt="Art 2" onclick="openPopup(this)">
+      <img src="art7.jpg" alt="Art 2" onclick="openPopup(this)">
+      <img src="art8.jpg" alt="Art 2" onclick="openPopup(this)">
+      <img src="art9.jpg" alt="Art 2" onclick="openPopup(this)">
+      <img src="art10.jpg" alt="Art 2" onclick="openPopup(this)">
+    </div>
+  </section>
+
+  <!-- Image Popup -->
+  <div id="popup" class="popup" onclick="closePopup()">
+    <img id="popup-img">
+  </div>
+  <!-- ✅ CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p>If you’d like to collaborate or share feedback, feel free to reach out!</p>
+  
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message..." rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:shrishtipal86@gmail.com">palshrashti85@gmail.com</a></p>
+      <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/artofshree9" target="_blank">@artofshree9</a></p>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+ <!-- Gratitude Message -->
+<div class="gratitude-message">
+          <p>       <b>Thank you</b> for visiting my art world!</p>
+         <p>   <i> I'm thrilled to share my passion for art with you.</i></p>
+        <p>  <i>Your support means everything to me, and I'm grateful for your time.</i></p>>
+       <p> <i>I hope you enjoy exploring my work and find inspiration in the art.</i></p>
+      <p><i>If you have any questions or would like to collaborate, please don't hesitate to <a href="contact.html">reach out</a>.</i></p>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 <b>Art of Shree</b> | Created by Shrashti Pal </p>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>

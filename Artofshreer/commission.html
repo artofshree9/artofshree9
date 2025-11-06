@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commission Work | Art of Shree</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7ff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #6c4bc7;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      background: white;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #6c4bc7;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      background-color: #6c4bc7;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #5838b1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background: #eee;
+      color: #555;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Commission Work Form 🎨
+  </header>
+
+  <div class="form-container">
+    <h2>Request Your Custom Artwork</h2>
+    <form action="https://formspree.io/f/myzbrpzj" method="POST"
+    onsubmit="window.location.href='thankyou.html';return false;">
+      <label for="name">Full Name:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="type">Artwork Type:</label>
+      <select name="type" id="type" required>
+        <option value="">Select Type</option>
+        <option value="portrait">Portrait</option>
+        <option value="sketch">Realistic Sketch</option>
+        <option value="digital">Digital Art</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="details">Additional Details (size, background, etc.):</label>
+      <textarea name="details" id="details" rows="4" required></textarea>
+
+      <label for="reference">Reference Image Link (optional):</label>
+      <input type="url" name="reference" id="reference" placeholder="Paste image link here">
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <footer>
+    © 2025 Art of Shree | All Rights Reserved
+  </footer>
+
+</body>
+</html>
